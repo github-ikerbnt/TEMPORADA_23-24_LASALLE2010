@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output
 #---------------------------------------------------------------------------------------------
 
 # Cargamos los datos
-df = pd.read_excel("2021-2022 LASALLE2010B.xlsx")
+df = pd.read_csv("src/2021-2022 LASALLE2010B.csv", encoding='latin1', sep=";")
 df=df.reset_index()
 for index in df.index:
     df.loc[index, 'index'] += 1
